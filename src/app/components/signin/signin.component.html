@@ -1,0 +1,54 @@
+<div class="row m-0 mt-5">
+    <div class="col-md-6">
+        <img src="./../../../assets/login-logo.jpg"  width="100%" height="400px">
+    </div>
+    <div class="col-md-6">
+        <div class="container">
+            <form class="form" [formGroup]="signInForm" (ngSubmit)="onSubmitSignInForm()">
+                <div class="card w-75">
+                    <div class="card-header bg-primary text-white">
+                        <h1>LOGIN</h1>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <div class="col col-sm-12">
+                                <i class="fa-regular fa-envelope"></i><label for="email" class="pl-1">Email: </label>
+                                <input type="text" id="email" formControlName="email" placeholder="Enter email"
+                                    class="form-control form-control-sm">
+                                <ng-container *ngIf="getEmail().invalid && getEmail().touched">
+                                    <ng-container *ngIf="getEmail()?.errors?.required">
+                                        <span class="text-danger" style="font-size: 14px;margin: 5px;">Email
+                                            required</span>
+                                    </ng-container>
+                                    <ng-container *ngIf="getEmail()?.errors?.email">
+                                        <span class="text-danger pt-2">Enter valid email</span>
+                                    </ng-container>
+                                </ng-container>
+                            </div>
+                            <div class="col col-sm-12 pt-3">
+                                <i class="fa-solid fa-lock"></i><label for="password" class="pl-1">Password:</label>
+                                <input type="password" id="password" formControlName="password"
+                                    placeholder="Enter password.." class="form-control form-control-sm">
+                                <ng-container *ngIf="getPassword().touched && getPassword().invalid">
+                                    <ng-container *ngIf="getPassword()?.errors?.required">
+                                        <span class="text-danger pt-2">Password required</span>
+                                    </ng-container>
+                                </ng-container>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col">
+                                <button type="submit" class="btn btn-primary w-100"
+                                    [disabled]="!this.signInForm.valid">Signin</button>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col"><span>Don't have an Account? <a routerLink="/signup">Signup</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

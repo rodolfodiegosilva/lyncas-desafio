@@ -1,0 +1,121 @@
+/* You can add global styles to this file, and also import other style files */
+//@import "~bootstrap-icons/font/bootstrap-icons.css"; // to use in <i> icons
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url("./../node_modules/@fortawesome/fontawesome-free/css/all.css");
+@media screen and (max-width: 767px) {
+    .row {
+        width: 100%;
+        flex-direction: column;
+        margin: 0px;
+    }
+
+    [class*="col-md-"] {
+        width: 100%;
+    }
+
+    mat-table {
+        overflow-x: auto;
+    }
+
+    mat-header-cell,
+    mat-cell {
+        min-width: 150px;
+    }
+
+    mat-sidenav {
+        width: 80% !important;
+    }
+
+    mat-sidenav-content {
+        .container {
+            margin: 0px;
+        }
+    }
+
+    .btn-class{
+        display: block;
+    }
+}
+
+@media screen and (max-width: 468px) {
+    .row {
+        display: flex;
+        flex-direction: column !important;
+        margin: 0px !important;
+    }
+
+    [class*="col-md-*"] {
+        width: 100%;
+        padding: 0px;
+    }
+
+    .card {
+        margin-left: 0px;
+        margin: 2px;
+    }
+
+    mat-table {
+        overflow-x: auto;
+    }
+
+    mat-header-cell,
+    mat-cell {
+        min-width: 150px;
+    }
+
+    mat-sidenav {
+        width: 80% !important;
+    }
+
+    mat-sidenav-content {
+        .container {
+            margin: 0px;
+        }
+    }
+
+    .btn-class{
+        display: block;
+    }
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background-color: #f2f2f2 !important;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+label,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p,
+button {
+    font-family: 'Poppins', sans-serif;
+}
+
+label {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+
+mat-header-cell {
+    font-family: 'Akaya Telivigala', cursive !important;
+    font-size: 16px !important;
+    color: #404040 !important;
+}
+
+.mat-paginator-page-size-label {
+    font-family: 'Akaya Telivigala', cursive !important;
+    font-size: 14px !important;
+    color: #404040 !important;
+}
